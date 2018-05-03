@@ -86,6 +86,8 @@ source ~/dotfiles/ros/setupros.sh
 
 # Aliases
 alias u='cd ..'
+alias duh='du --max-depth 1 -h'
+alias df='df -h'
 alias sourcez='source ~/.zshrc'
 alias vimz='vim ~/.zshrc'
 alias gtree="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"

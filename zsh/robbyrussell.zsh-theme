@@ -1,22 +1,7 @@
-# local host_color="green"
-# if [ -n "$SSH_CLIENT" ]; then
-#   local host_color="red"
-# fi
-
 local PROMPT_PREFIX=""
 if [ -n "$SSH_CLIENT" ]; then
-  local PROMPT_PREFIX="%{$fg_bold[red]%}%n@%m:"
+  local PROMPT_PREFIX="%{$fg_bold[green]%}%n@%m:"
 fi
-
-# function {
-#     if [[ -n "$SSH_CLIENT" ]]; then
-#         local PROMPT_PREFIX='%{$fg_bold[red]%}%n@%m:'
-#     else
-#         local PROMPT_PREFIX=''
-#     fi
-# }
-
-
 
 PROMPT='${PROMPT_PREFIX}%{$fg_bold[blue]%}%c%{$reset_color%} $(git_prompt_info)'
 

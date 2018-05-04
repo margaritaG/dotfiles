@@ -12,7 +12,9 @@ ln -sf "$DOTFILES_PATH/bash/bashrc" "$HOME_FOLDER/.bashrc"
 
 # zshrc
 ln -sf "$DOTFILES_PATH/zsh/zshrc" "$HOME_FOLDER/.zshrc"
-ln -sf "$DOTFILES_PATH/zsh/robbyrussell.zsh-theme" "$HOME_FOLDER/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme"
+if [ -f "$HOME_FOLDER/.oh-my-zsh" ]; then
+    ln -sf "$DOTFILES_PATH/zsh/robbyrussell.zsh-theme" "$HOME_FOLDER/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme"
+fi
 
 # Ignore future changes of bash_custom
 cd "$DOTFILES_PATH/" && git update-index --assume-unchanged "$DOTFILES_PATH/bash/bash_custom" && cd - > /dev/null

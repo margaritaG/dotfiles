@@ -3,9 +3,9 @@
 #   local host_color="red"
 # fi
 
-local PROMPT_PREFIX=''
+local PROMPT_PREFIX=""
 if [ -n "$SSH_CLIENT" ]; then
-  local PROMPT_PREFIX='%{$fg_bold[red]%}%n@%m:'
+  local PROMPT_PREFIX="%{$fg_bold[red]%}%n@%m:"
 fi
 
 # function {

@@ -1,9 +1,11 @@
 local PROMPT_PREFIX=""
+local PROMPT_PATH="%c"
 if [ -n "$SSH_CLIENT" ]; then
   local PROMPT_PREFIX="%{$fg_bold[green]%}%n@%m:"
+  local PROMPT_PATH="%~"
 fi
 
-PROMPT='${PROMPT_PREFIX}%{$fg_bold[blue]%}%c%{$reset_color%} $(git_prompt_info)'
+PROMPT='${PROMPT_PREFIX}%{$fg_bold[blue]%}${PROMPT_PATH}%{$reset_color%} $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "

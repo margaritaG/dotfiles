@@ -109,10 +109,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# CUSTOM STUFF
-# ALIASES
-alias sourcez='source ~/.bashrc'
-alias vimz='vim ~/.bashrc'
+# CUSTOM
+if [ -f ~/.bash_custom ]; then
+    . ~/.bash_custom
+fi
 
 # GIT stuff
 # Add git branch if its present to PS1
@@ -135,34 +135,5 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# ROS
-source ~/dotfiles/ros/setupros.sh
-
-# ROS sources
-# source /opt/ros/lunar/setup.bash
-# source ~/catkin_ws/devel/setup.bash
-# source ~/overlay_ws/devel/setup.bash
-
-
-# ROS sources
-#source /opt/ros/lunar/setup.bash
-#source ~/catkin_ws_release/devel/setup.bash
-#source ~/overlay_ws/devel/setup.bash
-
-# CUDA
-#PATH=/usr/local/cuda/bin:$PATH
-#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
-#CUDA_HOME=/usr/local/cuda
-
-# Caffe & Caffe2
-#PYTHONPATH=$PYTHONPATH:/home/margarita/caffe2/build
-#PYTHONPATH=$PYTHONPATH:/home/margarita/hed/python
-#LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-# Fix matcaffee runtime and compile-time libraries mismatch
-#LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/usr/lib/x86_64-linux-gnu/libprotobuf.so.9
-
-# The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/home/margarita/google-cloud-sdk/path.bash.inc' ]; then source '/home/margarita/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-#if [ -f '/home/margarita/google-cloud-sdk/completion.bash.inc' ]; then source '/home/margarita/google-cloud-sdk/completion.bash.inc'; fi
+alias sourcez='source ~/.bashrc'
+alias vimz='vim ~/.bashrc'

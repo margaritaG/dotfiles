@@ -99,11 +99,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# CUSTOM
+if [ -f ~/.bash_custom ]; then
+    . ~/.bash_custom
+fi
+
 alias sourcez='source ~/.zshrc'
 alias vimz='vim ~/.zshrc'
-
-# ROS
-source ~/dotfiles/ros/setupros.sh
-
-# Remote IPs.
-#export MAPCOMPUTE_IP=129.132.16.42

@@ -5,6 +5,7 @@ DOTFILES_PATH="/home/${USER}/dotfiles"
 
 # shell
 ln -sf "$DOTFILES_PATH/bash/bash_aliases" "$HOME_FOLDER/.bash_aliases"
+ln -sf "$DOTFILES_PATH/bash/bash_custom" "$HOME_FOLDER/.bash_custom"
 
 # bash
 ln -sf "$DOTFILES_PATH/bash/bashrc" "$HOME_FOLDER/.bashrc"

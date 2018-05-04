@@ -1,0 +1,14 @@
+# ROS
+source ~/dotfiles/ros/setupros.sh
+
+# CUDA
+PATH=/usr/local/cuda/bin:$PATH
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+CUDA_HOME=/usr/local/cuda
+
+# Caffe & Caffe2
+PYTHONPATH=$PYTHONPATH:/home/margarita/caffe2/build
+PYTHONPATH=$PYTHONPATH:/home/margarita/hed/python
+LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+# Fix matcaffee runtime and compile-time libraries mismatch
+LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/usr/lib/x86_64-linux-gnu/libprotobuf.so.9

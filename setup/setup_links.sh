@@ -4,7 +4,7 @@ HOME_FOLDER=/home/$USER
 DOTFILES_PATH="/home/${USER}/dotfiles"
 
 # shell
-ln -sf "$DOTFILES_PATH/bash/bash_aliases" "$HOME_FOLDER/.bash_aliases"
+ln -sf "$DOTFILES_PATH/bash/bash_common" "$HOME_FOLDER/.bash_common"
 ln -sf "$DOTFILES_PATH/bash/bash_custom" "$HOME_FOLDER/.bash_custom"
 
 # bash

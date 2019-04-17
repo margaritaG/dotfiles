@@ -94,6 +94,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+unsetopt share_history
+
 # COMMON
 if [ -f ~/.bash_common ]; then
     . ~/.bash_common
@@ -104,5 +106,3 @@ if [ -f ~/.bash_custom ]; then
     . ~/.bash_custom
 fi
 
-alias sourcez='source ~/.zshrc'
-alias vimz='vim ~/.zshrc'

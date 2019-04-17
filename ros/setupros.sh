@@ -46,11 +46,3 @@ function cb() {
     catkin build $@
   fi
 }
-
-function ctt() {
-  if [[ -z $1 ]] ; then
-    catkin run_tests --this --no-deps
-  else
-    catkin run_tests $@ --no-deps
-  fi
-}
